@@ -12,13 +12,13 @@ app.get('/', function(req, res){
                              // Can set parameters to pass to the view   
 });
 
-// Get request
+// Get request for ranked albums
 app.get('/rankedalbums', function(req, res){
     res.sendFile(path.join(__dirname,'pages/rankedalbums.html'), {title: 'Welcome'}); // can only render views
                              // Can set parameters to pass to the view   
 });
 
-// Get request
+// Get request for so far gone (will make this into its own albums.js class)
 app.get('/sofargone', function(req, res){
     res.sendFile(path.join(__dirname,'pages/sofargone.html'), {title: 'Welcome'}); // can only render views
                              // Can set parameters to pass to the view   
