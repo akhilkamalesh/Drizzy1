@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const slugify = require('slugify');
 
 
 const SongSchema = new mongoose.Schema({
@@ -29,6 +30,12 @@ const SongSchema = new mongoose.Schema({
         max: [10, 'Rating must be less tha 10']
     }
 
+});
+
+// Create album slug from the name
+SongSchema.pre('save', function(next) {
+    this.slug = slugify(this.songTitle, {lower:true});
+    next();
 });
 
 module.exports = mongoose.model('Song', SongSchema);
