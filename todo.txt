@@ -1,4 +1,5 @@
 1) Figure out MongoDB download and create the seeder to import the data into the server
+    - Create the seeder that will load the songs into the 
 2) Test sofargone seeding as well as create the web page for it
 3) Clean up the directory, and create different folders based on action
 4) Repeat process for the different albums when clicking view button
