@@ -1,6 +1,63 @@
 [
     {
-    "_id": "1",
-    "name": "So Far Gone"
+        "albumNumber": "1",
+        "albumTitle": "So Far Gone"
+    },
+    {
+        "albumNumber": "2",
+        "albumTitle": "Thank Me Later"
+    },
+    {
+        "albumNumber": "3",
+        "albumTitle": "Take Care"
+    }, 
+    {
+        "albumNumber": "4",
+        "albumTitle": "Nothing was the Same"
+    }, 
+    {
+        "albumNumber": "5",
+        "albumTitle": "If You're Reading This It's Too Late"
+    }, 
+    {
+        "albumNumber": "6",
+        "albumTitle": "What a Time to Be Alive"
+    }, 
+    {
+        "albumNumber": "7",
+        "albumTitle": "Views"
+    },   
+    {
+        "albumNumber": "8",
+        "albumTitle": "More Life"
+    },
+    {
+        "albumNumber": "9",
+        "albumTitle": "Scorpion"
+    }, 
+    {
+        "albumNumber": "10",
+        "albumTitle": "Care Package"
+    }, 
+    {
+        "albumNumber": "11",
+        "albumTitle": "Dark Lane Demo Tapes"
+    }, 
+    {
+        "albumNumber": "12",
+        "albumTitle": "Certified Lover Boy"
+    }, 
+    {
+        "albumNumber": "13",
+        "albumTitle": "Honestly, Nevermind"
+    }, 
+    {
+        "albumNumber": "14",
+        "albumTitle": "Her Loss"
+    }, 
+    {
+        "albumNumber": "15",
+        "albumTitle": "For All the Dogs"
     }
+    
 ]

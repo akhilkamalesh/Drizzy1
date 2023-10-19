@@ -1,6 +1,9 @@
 var express = require('express');
 var path = require('path');
 var dotenv = require('dotenv');
+
+const albums = require('./routes/albums');
+
 var connectDB = require('./config/db');
 
 // Load the environment variables
@@ -10,24 +13,18 @@ connectDB(); // Connect to the database via the method created in db.js
 
 var app = express(); // setting app to express
 
+// Body Parser
+app.use(express.json());
+
+// mount routers
+app.use('/albums', albums); // Connects it to the /albums/...
+
 app.use(express.static(path.join(__dirname, 'images'))); // static files for images to render in html
 
 
 // Get request
 app.get('/', function(req, res){
     res.sendFile(path.join(__dirname,'pages/index.html'), {title: 'Welcome'}); // can only render views
-                             // Can set parameters to pass to the view   
-});
-
-// Get request for ranked albums
-app.get('/rankedalbums', function(req, res){
-    res.sendFile(path.join(__dirname,'pages/rankedalbums.html'), {title: 'Welcome'}); // can only render views
-                             // Can set parameters to pass to the view   
-});
-
-// Get request for so far gone (will make this into its own albums.js class)
-app.get('/sofargone', function(req, res){
-    res.sendFile(path.join(__dirname,'pages/sofargone.html'), {title: 'Welcome'}); // can only render views
                              // Can set parameters to pass to the view   
 });
 

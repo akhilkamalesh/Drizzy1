@@ -1,104 +1,104 @@
 [
     {
-        "_id": "1",
+        "songNumber": "1",
         "songTitle": "Lust for Life",
-        "album": "1",
+        "albumNumber": "1",
         "rating": 6
     },
     {
-        "_id": "2",
+        "songNumber": "2",
         "songTitle": "Houstatlantavegas",
-        "album": "1",
+        "albumNumber": "1",
         "rating": 6
     },
     {
-        "_id": "3",
+        "songNumber": "3",
         "songTitle": "Successful",
-        "album": "1",
+        "albumNumber": "1",
         "rating": 9
     },
     {
-        "_id": "4",
+        "songNumber": "4",
         "songTitle": "Lets Call it Off",
-        "album": "1",
+        "albumNumber": "1",
         "rating": 5
     },
     {
-        "_id": "5",
+        "songNumber": "5",
         "songTitle": "November 18th",
-        "album": "1",
+        "albumNumber": "1",
         "rating": 2
     },
     {
-        "_id": "6",
+        "songNumber": "6",
         "songTitle": "Ignant Shit",
-        "album": "1",
+        "albumNumber": "1",
         "rating": 3
     },
     {
-        "_id": "7",
+        "songNumber": "7",
         "songTitle": "A Night Off",
-        "album": "1",
+        "albumNumber": "1",
         "rating": 6
     },
     {
-        "_id": "8",
+        "songNumber": "8",
         "songTitle": "Say What's Real",
-        "album": "1",
+        "albumNumber": "1",
         "rating": 7
     },
     {
-        "_id": "9",
+        "songNumber": "9",
         "songTitle": "Little Bit",
-        "album": "1",
+        "albumNumber": "1",
         "rating": 6
     },
     {
-        "_id": "10",
+        "songNumber": "10",
         "songTitle": "Best I Ever Had",
-        "album": "1",
+        "albumNumber": "1",
         "rating": 10
     },
     {
-        "_id": "11",
+        "songNumber": "11",
         "songTitle": "Unstoppable",
-        "album": "1",
+        "albumNumber": "1",
         "rating": 2
     },
     {
-        "_id": "13",
+        "songNumber": "13",
         "songTitle": "Sooner than Later",
-        "album": "1",
+        "albumNumber": "1",
         "rating": 5
     },
     {
-        "_id": "14",
+        "songNumber": "14",
         "songTitle": "Brias Interlude",
-        "album": "1",
+        "albumNumber": "1",
         "rating": 3
     },
     {
-        "_id": "15",
+        "songNumber": "15",
         "songTitle": "The Calm",
-        "album": "1",
+        "albumNumber": "1",
         "rating": 4
     },    
     {
-        "_id": "16",
+        "songNumber": "16",
         "songTitle": "Outro",
-        "album": "1",
+        "albumNumber": "1",
         "rating": 7
     },
     {
-        "_id": "17",
+        "songNumber": "17",
         "songTitle": "Brand New",
-        "album": "1",
+        "albumNumber": "1",
         "rating": 8
     },
     {
-        "_id": "18",
+        "songNumber": "18",
         "songTitle": "Congratulations",
-        "album": "1",
+        "albumNumber": "1",
         "rating": 5
     }
 ]
