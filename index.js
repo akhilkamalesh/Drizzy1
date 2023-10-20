@@ -3,6 +3,7 @@ var path = require('path');
 var dotenv = require('dotenv');
 
 const albums = require('./routes/albums');
+const songs = require('./routes/songs');
 
 var connectDB = require('./config/db');
 
@@ -18,7 +19,7 @@ app.use(express.json());
 
 // mount routers
 app.use('/albums', albums); // Connects it to the /albums/...
-app.use('/songs', albums);
+app.use('/songs', songs);
 
 app.use(express.static(path.join(__dirname, 'images'))); // static files for images to render in html
 
