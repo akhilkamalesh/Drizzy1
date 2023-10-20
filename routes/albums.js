@@ -20,17 +20,29 @@ router.get('/rankedalbums', async function(req, res, next){
 // Grabs the album and the songs for the albums
 router.get('/:slug', async function(req, res, next){
     try {
-        const album = await Albums.findOne({slug: req.params.slug})
-        console.log(album.albumNumber);
+        const album = await Albums.findOne({slug: req.params.slug}) // Grabs the album
 
-        const songs = await Songs.find({albumNumber: album.albumNumber})
-        console.log(songs)
-
+        // If it doesn't exist, return false
         if(!album){
             return res.status(400).json({success: false});
         }
 
-        res.status(200).json({sucess: true, data: album}).sendFile(path.join(process.env.ROOT_PATH, `pages/${req.params.id}.html`), {title: 'So Far Gone'}); 
+        // Grabs the songs from the album
+        const songs = await Songs.find({albumNumber: album.albumNumber})
+
+        // Creates the rating for the album
+        var albumRating = 0;
+        for(var song in songs){
+            if(songs.hasOwnProperty(song)){
+                albumRating = albumRating + songs[song].rating;
+                // console.log(songs[song]);
+            }
+        }        
+        albumRating = albumRating / Object.keys(songs).length;
+        album.rating = albumRating.toFixed(2);
+        console.log(album.rating);
+
+        res.status(200).json({sucess: true, album: album, albumRating: album.rating, song: songs}).sendFile(path.join(process.env.ROOT_PATH, `pages/${req.params.slug}.html`), {title: 'So Far Gone'}); 
 
     } catch (error) {
         console.log(error);

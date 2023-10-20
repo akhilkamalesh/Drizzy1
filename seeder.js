@@ -21,8 +21,8 @@ const songsJSON = JSON.parse(fs.readFileSync(`${__dirname}/_data/songs.json`, 'u
 // Import into DB
 const importData = async () => {
     try {
-        await Albums.create(albumsJSON);
         await Songs.create(songsJSON);
+        await Albums.create(albumsJSON);
         console.log('Data Imported...');
         process.exit();
     } catch (error) {

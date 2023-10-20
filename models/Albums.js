@@ -1,10 +1,11 @@
 const mongoose = require('mongoose')
+const Song = require('./Songs');
 const slugify = require('slugify');
 
 
 const AlbumSchema = new mongoose.Schema({
     albumNumber:{
-        type: Number,
+        type: String,
         required: [true, 'Please add an album title'],
         unique: true
     },
@@ -15,6 +16,7 @@ const AlbumSchema = new mongoose.Schema({
         trim: true,
         maxLength: [50, 'Cannot be more than 50 characters']
     },
+    AlbumRating: Number,
 
     slug: String, // So Far Gone = so-far-gone
 });

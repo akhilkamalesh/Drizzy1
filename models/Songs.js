@@ -4,9 +4,8 @@ const slugify = require('slugify');
 
 const SongSchema = new mongoose.Schema({
     songNumber: {
-        type: Number,
-        unique: true,
-        min: [1, 'Rating must be greater than 0'],
+        type: String,
+        unique: true    
     },
 
     songTitle: {
@@ -19,18 +18,19 @@ const SongSchema = new mongoose.Schema({
 
     slug: String, // So Far Gone = so-far-gone
     albumNumber: {
-        type: Number,
-        min: [1, 'Rating must be greater than 0'],
-        max: [15, 'Rating must be less than 15']
+        type: String,
+        ref: 'Album',
+        required: true
     },
 
     rating: {
         type: Number,
         min: [1, 'Rating must be greater than 0'],
-        max: [10, 'Rating must be less tha 10']
+        max: [10, 'Rating must be less than 10']
     }
 
 });
+
 
 // Create album slug from the name
 SongSchema.pre('save', function(next) {

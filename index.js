@@ -18,6 +18,7 @@ app.use(express.json());
 
 // mount routers
 app.use('/albums', albums); // Connects it to the /albums/...
+app.use('/songs', albums);
 
 app.use(express.static(path.join(__dirname, 'images'))); // static files for images to render in html
 
