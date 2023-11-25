@@ -8,7 +8,7 @@ const Songs = require('../models/Songs')
 // Get request for songs
 router.get('/rankedsongs', async function(req, res, next){
     try {
-        const songs = await Songs.find().sort({rating: 1});
+        const songs = await Songs.find().sort({rating: -1});
         res.status(200).json({success: true, data: songs}).sendFile(path.join(process.env.ROOT_PATH,'pages/rankedsongs.html'), {title: 'Welcome'}); // can only render views
     } catch (error) {
         console.log(error);

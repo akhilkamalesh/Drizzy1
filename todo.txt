@@ -1,4 +1,4 @@
 1) Test sofargone seeding as well as create the web page for it
-    - Create the back end model: querying; ordering; and so one -> return it as a json in the console for now
+    - Create the webpage for so-far-gone and test out how to insert elements into the webpage
 2) Clean up the directory, and create different folders based on action
 3) Repeat process for the different albums when clicking view button

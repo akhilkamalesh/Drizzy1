@@ -9,7 +9,8 @@ const Songs = require('../models/Songs')
 router.get('/rankedalbums', async function(req, res, next){
     try {
         const albums = await Albums.find().sort({albumNumber: 1});
-        res.status(200).json({success: true, data: albums}).sendFile(path.join(process.env.ROOT_PATH,'pages/rankedalbums.html'), {title: 'Welcome'}); // can only render views
+        // res.status(200).json({success: true, data: albums}).sendFile(path.join(process.env.ROOT_PATH,'pages/rankedalbums.html'), {title: 'Welcome'}); // can only render views
+        res.sendFile(path.join(process.env.ROOT_PATH,'pages/rankedalbums.html'), {title: 'Welcome'}); // can only render views
     } catch (error) {
         console.log(error);
         res.status(400).json({success: false});
@@ -38,11 +39,11 @@ router.get('/:slug', async function(req, res, next){
                 // console.log(songs[song]);
             }
         }        
-        albumRating = albumRating / Object.keys(songs).length;
+        var albumRating = albumRating / Object.keys(songs).length;
         album.rating = albumRating.toFixed(2);
         console.log(album.rating);
 
-        res.status(200).json({sucess: true, album: album, albumRating: album.rating, song: songs}).sendFile(path.join(process.env.ROOT_PATH, `pages/${req.params.slug}.html`), {title: 'So Far Gone'}); 
+        res.status(200)/*.json({sucess: true, album: album, albumRating: album.rating, song: songs})*/.sendFile(path.join(process.env.ROOT_PATH, `pages/${req.params.slug}.html`), {title: 'So Far Gone'}); 
 
     } catch (error) {
         console.log(error);
